@@ -183,7 +183,7 @@ nnoremap <F5> :w<CR>:!python %<CR>
 inoremap <F5> <C-c>:w<CR>:!python %<CR>
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
-nnoremap <C-L> :nohl<CR><C-L>
+nnoremap <F3> :noh<CR>
 
 " Map jj to exit insert mode
 inoremap jj <Esc>
