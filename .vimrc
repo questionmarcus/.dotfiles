@@ -41,6 +41,7 @@ colorscheme solarized
 " allow fortran to have tabs
 let fortran_have_tabs=1
 
+let g:tex_flavor="latex"
 let g:enable_vimtex=1
 " airline options -------------------------------------------
 
