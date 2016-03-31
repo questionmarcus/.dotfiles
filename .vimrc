@@ -44,6 +44,7 @@ let fortran_have_tabs=1
 let g:tex_flavor="latex"
 let g:enable_vimtex=1
 let g:vimtex_view_method="mupdf"
+let g:vimtex_latexmk_options="-xelatex"
 " airline options -------------------------------------------
 
 let g:airline_powerline_fonts=1
