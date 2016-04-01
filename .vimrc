@@ -9,6 +9,12 @@
 " These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
 
+" set word wrap so that words go onto next line of editor, but not creating a
+" whole new line in the document.
+set wrap
+set linebreak
+set nolist
+
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
