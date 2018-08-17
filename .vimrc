@@ -63,6 +63,10 @@ let g:vimtex_compiler_latexmk = {
 \   '-interaction=nonstopmode',
 \ ],
 \}
+let g:vimtex_quickfix_latexlog = {
+\ 'underfull':0,
+\ 'overfull':0,
+\}
 
 " AIRLINE CONGIG
 let g:airline_powerline_fonts = 1
