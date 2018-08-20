@@ -1,9 +1,8 @@
-(cat ~/.cache/wal/sequences &)
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
-export ZSH=/home/marcus/.oh-my-zsh
+  
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -85,8 +84,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+if [ "$(uname 2> /dev/null)"=="Darwin" ]; then
+    export PATH=${PATH}:${HOME}/Library/Python/3.7/bin/
+	alias vim='vim'
+elif [ "$(uname 2> /dev/null)"=="Linux" ]; then
+	alias vim='vim --servername VIM'
+    (cat ~/.cache/wal/sequences &)
+    source /usr/bin/virtualenvwrapper.sh
+fi
 export EDITOR='vim'
-alias vim='vim --servername VIM'
+#alias vim='vim --servername VIM'
 alias polaroidscan='scanimage --device "epson2:net:192.168.0.14" --format=png --mode=Color --resolution=300 -x 108 -y 86'
 alias pacaur="yay"
 alias uniwork='cd ~/Documents/Uni-Work_2017-2018/'
@@ -94,4 +101,3 @@ alias dissertation='uniwork && cd Dissertation'
 alias copy='xclip -sel clip'
 alias cpcurrdir='pwd | copy'
 
-source /usr/bin/virtualenvwrapper.sh
